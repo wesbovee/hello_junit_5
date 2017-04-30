@@ -15,6 +15,7 @@
 		<junit.platform.version>1.0.0-M4</junit.platform.version>
 		<junit.jupiter.version>5.0.0-M4</junit.jupiter.version>
 		<junit.vintage.version>4.12.0-M4</junit.vintage.version>
+		<logback.version>1.2.3</logback.version>
 		<java.version>1.8</java.version>
 	</properties>
 
@@ -43,25 +44,18 @@
 						<artifactId>junit-jupiter-engine</artifactId>
 						<version>${junit.jupiter.version}</version>
 					</dependency>
-					<dependency>
-						<groupId>org.junit.vintage</groupId>
-						<artifactId>junit-vintage-engine</artifactId>
-						<version>${junit.vintage.version}</version>
-					</dependency>
 				</dependencies>
 			</plugin>
 		</plugins>
 	</build>
 
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-engine</artifactId>
 			<version>${junit.jupiter.version}</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-console -->
 		<dependency>
 			<groupId>org.junit.platform</groupId>
 			<artifactId>junit-platform-runner</artifactId>
@@ -69,17 +63,10 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.junit.vintage</groupId>
-			<artifactId>junit-vintage-engine</artifactId>
-			<version>${junit.vintage.version}</version>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.7.25</version>
-		</dependency>
-
 	</dependencies>
 
 </project>
