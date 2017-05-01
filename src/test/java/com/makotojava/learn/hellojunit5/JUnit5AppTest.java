@@ -1,6 +1,11 @@
 package com.makotojava.learn.hellojunit5;
 
+import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.AfterAll;
@@ -58,9 +63,24 @@ public class JUnit5AppTest {
 
   @Test
   @DisplayName("Dummy test")
-  void aTest() {
-    log.info("As written, this test will always pass!");
-    assertEquals(4, (2 + 2));
+  void dummyTest() {
+    int expected = 4;
+    int actual = 2 + 2;
+    assertEquals(expected, actual, "INCONCEIVABLE!");
+    //
+    Object nullValue = null;
+    assertFalse(nullValue != null);
+    assertNull(nullValue);
+    assertNotNull("A String", "INCONCEIVABLE!");
+    assertTrue(nullValue == null);
+
+    assertAll(
+        "Assert All of these",
+        () -> assertEquals(expected, actual, "INCONCEIVABLE!"),
+        () -> assertFalse(nullValue != null),
+        () -> assertNull(nullValue),
+        () -> assertNotNull("A String", "INCONCEIVABLE!"),
+        () -> assertTrue(nullValue == null));
   }
 
   @Test
