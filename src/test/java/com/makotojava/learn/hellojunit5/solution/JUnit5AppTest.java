@@ -44,6 +44,7 @@ import org.slf4j.LoggerFactory;
  * JUnit 5 (with JUnitPlatform.class)
  *
  */
+@Disabled
 @RunWith(JUnitPlatform.class)
 @DisplayName("Testing using JUnit 5")
 public class JUnit5AppTest {
