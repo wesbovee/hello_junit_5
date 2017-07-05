@@ -2,7 +2,9 @@
 
 This repository accompanies Part 1 of my Junit 5 Tutorial series on IBM developerWorks.
 
-Publication date: June 2017
+Publication date: July 2017
+
+Uses JUnit 5, Milestone 5
 
 Cheers,
 J Steven Perry
