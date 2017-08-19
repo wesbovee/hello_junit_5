@@ -27,39 +27,26 @@ import org.slf4j.LoggerFactory;
  * </ol>
  *
  */
-@RunWith(JUnitPlatform.class)
-@DisplayName("Testing using JUnit 5")
 public class JUnit5AppTest {
 
-  private static final Logger log = LoggerFactory.getLogger(JUnit5AppTest.class);
+  // Create a JDK Logger here
 
-  private App classUnderTest;
+  // Create a fixture for the class under test
 
-  @BeforeAll
+  // Do something before ANY test is run in this class
   public static void init() {
-    // Do something before ANY test is run in this class
   }
 
-  @AfterAll
+  // Do something after ALL tests in this class are run
   public static void done() {
-    // Do something after ALL tests in this class are run
   }
 
-  @BeforeEach
-  public void setUp() throws Exception {
-    classUnderTest = new App();
-  }
+  // Create an instance of the test class before each @Test method is executed
 
-  @AfterEach
-  public void tearDown() throws Exception {
-    classUnderTest = null;
-  }
+  // Destroy reference to the instance of the test class after each @Test method is executed
 
-  @Test
-  @Disabled
-  @DisplayName("A disabled test")
+  // Disabled test
   void testNotRun() {
-    log.info("This test will not run (it is disabled, silly).");
   }
 
   /**
