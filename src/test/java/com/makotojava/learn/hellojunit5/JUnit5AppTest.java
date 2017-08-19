@@ -1,26 +1,5 @@
 package com.makotojava.learn.hellojunit5;
 
-/*
- * Copyright 2017 Makoto Consulting Group, Inc.
- * 
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * 
- * http://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.AfterAll;
@@ -77,28 +56,6 @@ public class JUnit5AppTest {
   }
 
   @Test
-  @DisplayName("Dummy test")
-  void dummyTest() {
-    int expected = 4;
-    int actual = 2 + 2;
-    assertEquals(expected, actual, "INCONCEIVABLE!");
-    //
-    Object nullValue = null;
-    assertFalse(nullValue != null);
-    assertNull(nullValue);
-    assertNotNull("A String", "INCONCEIVABLE!");
-    assertTrue(nullValue == null);
-
-    assertAll(
-        "Assert All of these",
-        () -> assertEquals(expected, actual, "INCONCEIVABLE!"),
-        () -> assertFalse(nullValue != null),
-        () -> assertNull(nullValue),
-        () -> assertNotNull("A String", "INCONCEIVABLE!"),
-        () -> assertTrue(nullValue == null));
-  }
-
-  @Test
   @Disabled
   @DisplayName("A disabled test")
   void testNotRun() {
@@ -136,15 +93,15 @@ public class JUnit5AppTest {
    * <li>Make this class a nested test class (hint: use {@link org.junit.jupiter.api.Nested @Nested}).
    * <li>Give the class a cool {@link org.junit.jupiter.api.DisplayName @DisplayName} that shows up in the JUnit test
    * report.</li>
-   * <li>Create an instance of the {@link com.makotojava.learn.hellojunit.App App} class specifically for this nested
+   * <li>Create an instance of the {@link com.makotojava.learn.hellojunit5.App App} class specifically for this nested
    * class:
    * <ul>
-   * Set the <code>classUnderTest</code> variable in a method called <code>setUp()</code> that runs before the test
-   * method does (hint: use {@link org.junit.jupiter.api.BeforeEach @BeforeEach})
-   * <ul>
-   * Set the <code>classUnderTest</code> variable to null in a method called <code>tearDown()</code> that runs after the
-   * test method does (hint: use {@link org.junit.jupiter.api.BeforeEach @AfterEach})
-   * </li>
+   * <li>Set the <code>classUnderTest</code> variable in a method called <code>setUp()</code> that runs before the test
+   * method does (hint: use {@link org.junit.jupiter.api.BeforeEach @BeforeEach})</li>
+   * </ul>
+   * <li>Set the <code>classUnderTest</code> variable to null in a method called <code>tearDown()</code> that runs after
+   * the
+   * test method does (hint: use {@link org.junit.jupiter.api.BeforeEach @AfterEach})</li>
    * </ol>
    * 
    */

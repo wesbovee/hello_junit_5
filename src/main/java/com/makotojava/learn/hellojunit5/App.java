@@ -19,12 +19,6 @@ public class App {
   /**
    * Computes the sum of the specified operands.
    * 
-   * As an exercise, implement this method so that all of the unit tests
-   * you write for it pass. Once you do that, you're done!
-   * 
-   * Hint: if you get stuck, have a look
-   * {@link com.makotojava.learn.hellojunit5.solution.App here}.
-   * 
    * @param operands
    *          These are the operands. It's sort of there in the name.
    * 
@@ -38,12 +32,15 @@ public class App {
   public long add(long[] operands) {
     // Compute the sum
     long ret = 0;
-    //
-    // TODO: As an exercise, implement this method so that all of the unit tests
-    /// you write for it pass. Once you do that, you're done!
-    //
-    // Hint: if you get stuck, look at the {@link com.makotojava.learn.hellojunit5.solution.App App class}
-    //
+    if (operands == null) {
+      throw new IllegalArgumentException("Operands argument cannot be null");
+    }
+    if (operands.length == 0) {
+      throw new IllegalArgumentException("Operands argument cannot be empty");
+    }
+    for (long operand : operands) {
+      ret += operand;
+    }
     return ret;
   }
 }

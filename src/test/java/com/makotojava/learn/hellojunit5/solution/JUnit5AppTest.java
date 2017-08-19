@@ -17,11 +17,8 @@ package com.makotojava.learn.hellojunit5.solution;
  */
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 import static org.junit.jupiter.api.Assumptions.assumingThat;
 
@@ -71,28 +68,6 @@ public class JUnit5AppTest {
   @AfterEach
   public void tearDown() throws Exception {
     classUnderTest = null;
-  }
-
-  @Test
-  @DisplayName("Dummy test")
-  void dummyTest() {
-    int expected = 4;
-    int actual = 2 + 2;
-    assertEquals(expected, actual, "INCONCEIVABLE!");
-    //
-    Object nullValue = null;
-    assertFalse(nullValue != null);
-    assertNull(nullValue);
-    assertNotNull("A String", "INCONCEIVABLE!");
-    assertTrue(nullValue == null);
-
-    assertAll(
-        "Assert All of these",
-        () -> assertEquals(expected, actual, "INCONCEIVABLE!"),
-        () -> assertFalse(nullValue != null),
-        () -> assertNull(nullValue),
-        () -> assertNotNull("A String", "INCONCEIVABLE!"),
-        () -> assertTrue(nullValue == null));
   }
 
   @Test
