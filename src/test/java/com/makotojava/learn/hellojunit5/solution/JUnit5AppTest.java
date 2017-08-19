@@ -53,20 +53,24 @@ public class JUnit5AppTest {
   @BeforeAll
   public static void init() {
     // Do something before ANY test is run in this class
+    log.info("@BeforeAll: init()");
   }
 
   @AfterAll
   public static void done() {
     // Do something after ALL tests in this class are run
+    log.info("@AfterAll: done()");
   }
 
   @BeforeEach
   public void setUp() throws Exception {
+    log.info("@BeforeEach: setUp()");
     classUnderTest = new App();
   }
 
   @AfterEach
   public void tearDown() throws Exception {
+    log.info("@AfterEach: tearDown()");
     classUnderTest = null;
   }
 
@@ -80,6 +84,7 @@ public class JUnit5AppTest {
   @Test
   @DisplayName("When numbers are > 0")
   public void testAdd() {
+    log.info("@Test: testAdd()");
     assertNotNull(classUnderTest);
     assertAll(
         () -> {
