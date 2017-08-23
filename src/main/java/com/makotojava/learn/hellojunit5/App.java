@@ -37,7 +37,7 @@ public class App {
    */
   public long add(long[] operands) {
     // Compute the sum
-    long ret = 0;
+    long ret = Long.MIN_VALUE;
     // TDD - add this once we run all the unit tests.
     //
     // TODO: As an exercise, implement this method so that all of the unit tests
