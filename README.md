@@ -4,7 +4,7 @@ This repository accompanies Part 1 of my Junit 5 Tutorial series on IBM develope
 
 Publication date: July 2017
 
-Uses JUnit 5, Milestone 5
+Uses JUnit 5, Release Candidate 3
 
 Cheers,
 J Steven Perry
