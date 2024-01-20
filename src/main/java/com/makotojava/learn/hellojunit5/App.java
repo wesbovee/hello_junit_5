@@ -37,14 +37,16 @@ public class App {
    */
   public long add(long[] operands) {
     // Compute the sum
-    long ret = Long.MIN_VALUE;
-    // TDD - add this once we run all the unit tests.
-    //
-    // TODO: As an exercise, implement this method so that all of the unit tests
-    /// you write for it pass. Once you do that, you're done!
-    //
-    // Hint: if you get stuck, look at the {@link com.makotojava.learn.hellojunit5.solution.App App class}
-    //
+    long ret = 0;
+    if (operands == null) {
+      throw new IllegalArgumentException("Operands argument cannot be null");
+    }
+    if (operands.length == 0) {
+      throw new IllegalArgumentException("Operands argument cannot be empty");
+    }
+    for (long operand : operands) {
+      ret += operand;
+    }
     return ret;
   }
 }
